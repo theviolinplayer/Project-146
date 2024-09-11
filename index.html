@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Unique Robot Design</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Robot Body -->
+      <a-cylinder
+        position="0 1 -5"
+        radius="0.5"
+        height="1.2"
+        color="#4A90E2"
+      ></a-cylinder>
+
+      <!-- Head -->
+      <a-sphere position="0 2 -5" radius="0.4" color="#7FDBFF"></a-sphere>
+
+      <!-- Antenna -->
+      <a-cone
+        position="0 2.5 -5"
+        radius-bottom="0.05"
+        radius-top="0.01"
+        height="0.5"
+        color="#FFD700"
+        animation="property: rotation; to: 0 0 360; dur: 3000; loop: true"
+      ></a-cone>
+
+      <!-- Eyes -->
+      <a-sphere
+        position="-0.15 2.1 -4.6"
+        radius="0.05"
+        color="#FFFFFF"
+        animation="property: position; to: -0.15 2.12 -4.6; dir: alternate; dur: 500; loop: true"
+      ></a-sphere>
+      <a-sphere
+        position="0.15 2.1 -4.6"
+        radius="0.05"
+        color="#FFFFFF"
+        animation="property: position; to: 0.15 2.12 -4.6; dir: alternate; dur: 500; loop: true"
+      ></a-sphere>
+
+      <!-- Pupils -->
+      <a-sphere position="-0.15 2.1 -4.55" radius="0.02" color="#000000"></a-sphere>
+      <a-sphere position="0.15 2.1 -4.55" radius="0.02" color="#000000"></a-sphere>
+
+      <!-- Mouth -->
+      <a-box position="0 1.9 -4.5" width="0.2" height="0.05" depth="0.02" color="#FF4136"></a-box>
+
+      <!-- Arms -->
+      <a-cylinder
+        position="-0.6 1.2 -5"
+        radius="0.05"
+        height="0.8"
+        color="#7FDBFF"
+        rotation="0 0 30"
+        animation="property: rotation; to: 0 0 60; dir: alternate; dur: 2000; loop: true"
+      ></a-cylinder>
+      <a-cylinder
+        position="0.6 1.2 -5"
+        radius="0.05"
+        height="0.8"
+        color="#7FDBFF"
+        rotation="0 0 -30"
+        animation="property: rotation; to: 0 0 -60; dir: alternate; dur: 2000; loop: true"
+      ></a-cylinder>
+
+      <!-- Hands -->
+      <a-sphere position="-0.9 1 -5" radius="0.1" color="#FFDC00"></a-sphere>
+      <a-sphere position="0.9 1 -5" radius="0.1" color="#FFDC00"></a-sphere>
+
+      <!-- Legs -->
+      <a-box
+        position="-0.2 0.3 -5"
+        width="0.15"
+        height="0.5"
+        depth="0.15"
+        color="#4A90E2"
+        rotation="0 0 10"
+      ></a-box>
+      <a-box
+        position="0.2 0.3 -5"
+        width="0.15"
+        height="0.5"
+        depth="0.15"
+        color="#4A90E2"
+        rotation="0 0 -10"
+      ></a-box>
+
+      <!-- Feet -->
+      <a-cylinder
+        position="-0.2 0 -5"
+        radius="0.1"
+        height="0.05"
+        color="#001F3F"
+        rotation="90 0 0"
+      ></a-cylinder>
+      <a-cylinder
+        position="0.2 0 -5"
+        radius="0.1"
+        height="0.05"
+        color="#001F3F"
+        rotation="90 0 0"
+      ></a-cylinder>
+    </a-scene>
+  </body>
+</html>
